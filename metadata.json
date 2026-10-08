@@ -1,0 +1,6 @@
+{
+  "name": "Astro Experts",
+  "description": "Done-For-You Marketing & Growth Systems for Occult Professionals. Astrologers, Tarot Readers, Numerologists, Vastu Consultants & Healers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

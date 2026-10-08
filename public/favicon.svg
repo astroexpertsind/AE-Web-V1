@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Astro Experts Official Logo Favicon -->
+  <path
+    d="M36 12 C29 12 24 16 21 23 L10 58 C7 67 10 75 16 80 L46 102 C48.5 104 51.5 104 54 102 L84 80 C90 75 93 67 90 58 L79 23 C76 16 71 12 64 12 Z"
+    fill="#FF5B00"
+  />
+  <path
+    d="M26 66 L50 20 L74 66 C68 70 59 73 50 73 C41 73 32 70 26 66 Z"
+    fill="#FFFFFF"
+  />
+  <path
+    d="M50 34 L64 61 C60 63 55 64.5 50 64.5 C45 64.5 40 63 36 61 Z"
+    fill="#FF5B00"
+  />
+</svg>
