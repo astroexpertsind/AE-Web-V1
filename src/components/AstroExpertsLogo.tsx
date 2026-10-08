@@ -9,7 +9,7 @@ interface LogoProps {
 
 export const AstroExpertsLogo: React.FC<LogoProps> = ({
   className = '',
-  variant = 'dark-bg',
+  variant = 'light-bg',
   showText = true,
   size = 'md',
 }) => {

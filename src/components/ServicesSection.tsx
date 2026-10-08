@@ -78,24 +78,24 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenAudit, i
   ];
 
   return (
-    <section className={`${isStandalonePage ? 'pt-32 pb-24' : 'py-24'} bg-[#0E1116] border-t border-white/[0.04]`}>
+    <section className={`${isStandalonePage ? 'pt-32 pb-24' : 'py-24'} bg-[#F8F9FA] border-t border-zinc-200/80`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#FF5B00]/25 bg-[#FF5B00]/10 text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
             <span>Services & Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-950 tracking-tight font-heading">
             Specialized Marketing Architecture For Occult Leaders
           </h2>
-          <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
             Every practice is unique. We do not sell one-size-fits-all packages. Astro Experts designs and implements customized systems tailored to your specific discipline, capacity, and commercial goals.
           </p>
         </div>
 
         {/* Note on Tailored Scope */}
-        <div className="max-w-3xl mx-auto mb-12 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] text-center text-xs text-zinc-400">
-          <span className="text-[#FF5B00] font-semibold">Important Note: </span>
+        <div className="max-w-3xl mx-auto mb-12 p-4.5 rounded-2xl bg-orange-50/70 border border-orange-200 text-center text-xs text-zinc-700 shadow-2xs">
+          <span className="text-[#FF5B00] font-bold">Important Note: </span>
           Not every client needs every service. We begin with a Growth Audit to identify your exact bottlenecks, then deploy only the marketing systems that move your practice forward.
         </div>
 
@@ -106,29 +106,29 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenAudit, i
             return (
               <div
                 key={svc.title}
-                className="rounded-2xl bg-[#141820] border border-white/[0.06] p-7 flex flex-col justify-between hover:border-[#FF5B00]/40 hover:bg-[#161B24] transition-all duration-300"
+                className="rounded-2xl bg-white border border-zinc-200/90 p-7 flex flex-col justify-between hover:border-[#FF5B00]/40 hover:shadow-lg transition-all duration-300"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#FF5B00]/10 border border-[#FF5B00]/20 flex items-center justify-center text-[#FF5B00] mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[#FF5B00] mb-5">
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2 font-heading">
+                  <h3 className="text-xl font-bold text-zinc-950 mb-2 font-heading">
                     {svc.title}
                   </h3>
 
-                  <p className="text-xs text-zinc-400 mb-6 leading-relaxed">
+                  <p className="text-xs text-zinc-600 mb-6 leading-relaxed">
                     {svc.description}
                   </p>
 
-                  <div className="space-y-3 pt-4 border-t border-white/[0.06]">
+                  <div className="space-y-3 pt-4 border-t border-zinc-100">
                     {svc.capabilities.map((cap, cIdx) => (
                       <div key={cIdx} className="space-y-0.5">
-                        <div className="text-xs font-semibold text-zinc-200 flex items-center gap-2">
+                        <div className="text-xs font-semibold text-zinc-800 flex items-center gap-2">
                           <CheckCircle className="w-3.5 h-3.5 text-[#FF5B00] flex-shrink-0" />
                           <span>{cap.name}</span>
                         </div>
-                        <div className="text-[11px] text-zinc-400 pl-5 leading-normal">
+                        <div className="text-[11px] text-zinc-500 pl-5 leading-normal">
                           {cap.desc}
                         </div>
                       </div>
@@ -136,14 +136,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenAudit, i
                   </div>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-white/[0.04] flex items-center justify-between">
-                  <span className="text-[11px] text-zinc-500 font-mono">DONE-FOR-YOU</span>
+                <div className="mt-8 pt-4 border-t border-zinc-100 flex items-center justify-between">
+                  <span className="text-[11px] text-zinc-400 font-mono">DONE-FOR-YOU</span>
                   <button
                     onClick={() => {
                       trackEvent('cta_click', { location: 'service_card', service: svc.title });
                       onOpenAudit();
                     }}
-                    className="text-xs font-bold text-[#FF5B00] hover:text-[#FFA066] flex items-center gap-1 cursor-pointer"
+                    className="text-xs font-bold text-[#FF5B00] hover:text-[#E05000] flex items-center gap-1 cursor-pointer"
                   >
                     <span>Request Audit</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -155,11 +155,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenAudit, i
         </div>
 
         {/* Section Bottom Banner */}
-        <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-[#181C24] via-[#1A202A] to-[#181C24] border border-white/[0.08] text-center max-w-4xl mx-auto space-y-4">
-          <h3 className="text-xl font-bold text-white font-heading">
+        <div className="mt-16 p-8 rounded-2xl bg-white border border-zinc-200 shadow-md text-center max-w-4xl mx-auto space-y-4">
+          <h3 className="text-xl font-bold text-zinc-950 font-heading">
             Not sure which systems your practice needs right now?
           </h3>
-          <p className="text-xs sm:text-sm text-zinc-400 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-zinc-600 max-w-xl mx-auto">
             Our Growth Audit systematically analyzes your profile, content, audience sentiment, and enquiry channels to pinpoint exactly where revenue is leaking.
           </p>
           <div className="pt-2">
@@ -168,7 +168,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenAudit, i
                 trackEvent('cta_click', { location: 'services_bottom_banner' });
                 onOpenAudit();
               }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF5B00] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#E05000] shadow-lg shadow-[#FF5B00]/20 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#FF5B00] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#E05000] shadow-lg shadow-[#FF5B00]/25 transition-all cursor-pointer"
             >
               <span>GET YOUR GROWTH AUDIT</span>
               <ArrowRight className="w-4 h-4" />

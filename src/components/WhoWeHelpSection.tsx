@@ -96,16 +96,16 @@ export const WhoWeHelpSection: React.FC<WhoWeHelpSectionProps> = ({ onOpenAudit,
   ];
 
   return (
-    <section className={`${isStandalonePage ? 'pt-32 pb-24' : 'py-24'} bg-[#0B0D11]`}>
+    <section className={`${isStandalonePage ? 'pt-32 pb-24' : 'py-24'} bg-white border-b border-zinc-200/80`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#FF5B00]/25 bg-[#FF5B00]/10 text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
             <span>Industry Specialization</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-950 tracking-tight font-heading">
             Built For The Occult Industry.
           </h2>
-          <p className="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed">
             We don’t generalize. We understand the nuances, ethics, terminology, and delicate client psychology unique to occult and esoteric disciplines.
           </p>
         </div>
@@ -117,46 +117,46 @@ export const WhoWeHelpSection: React.FC<WhoWeHelpSectionProps> = ({ onOpenAudit,
             return (
               <div
                 key={aud.title}
-                className="group rounded-2xl bg-[#12151B] border border-white/[0.06] p-7 flex flex-col justify-between transition-all duration-300 hover:border-[#FF5B00]/40 hover:bg-[#141820]"
+                className="group rounded-2xl bg-zinc-50 border border-zinc-200/90 p-7 flex flex-col justify-between transition-all duration-300 hover:border-[#FF5B00]/40 hover:bg-white hover:shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#FF5B00] group-hover:scale-105 group-hover:bg-[#FF5B00]/10 transition-all">
+                    <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[#FF5B00] group-hover:scale-105 group-hover:bg-[#FF5B00]/15 transition-all">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">
+                    <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
                       Specialization
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-1 font-heading">
+                  <h3 className="text-2xl font-bold text-zinc-950 mb-1 font-heading">
                     {aud.title}
                   </h3>
-                  <div className="text-xs text-[#FF5B00] font-medium mb-4">
+                  <div className="text-xs text-[#E05000] font-semibold mb-4">
                     {aud.discipline}
                   </div>
 
-                  <div className="mb-4 p-3.5 rounded-xl bg-black/30 border border-white/[0.04]">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-1">
+                  <div className="mb-4 p-3.5 rounded-xl bg-white border border-zinc-200 shadow-2xs">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 mb-1">
                       Typical Challenge
                     </div>
-                    <p className="text-xs text-zinc-400 leading-relaxed">
+                    <p className="text-xs text-zinc-600 leading-relaxed">
                       {aud.challenge}
                     </p>
                   </div>
 
                   <div className="mb-6">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-300 mb-1.5">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-800 mb-1.5">
                       The Astro Experts Growth Solution
                     </div>
-                    <p className="text-xs text-zinc-300 leading-relaxed font-medium">
+                    <p className="text-xs text-zinc-700 leading-relaxed font-medium">
                       {aud.solution}
                     </p>
                   </div>
 
-                  <div className="space-y-2 pt-4 border-t border-white/[0.06]">
+                  <div className="space-y-2 pt-4 border-t border-zinc-200">
                     {aud.keyOutcomes.map((outcome, oIdx) => (
-                      <div key={oIdx} className="flex items-start gap-2 text-[11px] text-zinc-400">
+                      <div key={oIdx} className="flex items-start gap-2 text-[11px] text-zinc-600">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#FF5B00] mt-1 flex-shrink-0" />
                         <span>{outcome}</span>
                       </div>
@@ -164,14 +164,14 @@ export const WhoWeHelpSection: React.FC<WhoWeHelpSectionProps> = ({ onOpenAudit,
                   </div>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-white/[0.04] flex items-center justify-between">
-                  <span className="text-[11px] text-zinc-500">DFY Growth System</span>
+                <div className="mt-8 pt-4 border-t border-zinc-200 flex items-center justify-between">
+                  <span className="text-[11px] text-zinc-400">DFY Growth System</span>
                   <button
                     onClick={() => {
                       trackEvent('cta_click', { location: 'audience_card', profession: aud.title });
                       onOpenAudit();
                     }}
-                    className="text-xs font-bold text-[#FF5B00] hover:text-[#FFA066] flex items-center gap-1 cursor-pointer"
+                    className="text-xs font-bold text-[#FF5B00] hover:text-[#E05000] flex items-center gap-1 cursor-pointer"
                   >
                     <span>Audit My Practice</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -183,12 +183,12 @@ export const WhoWeHelpSection: React.FC<WhoWeHelpSectionProps> = ({ onOpenAudit,
         </div>
 
         {/* Other Occult Professionals Note */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#141820] border border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 p-6 rounded-2xl bg-orange-50/40 border border-orange-200 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <h4 className="text-base font-bold text-white font-heading">
+            <h4 className="text-base font-bold text-zinc-950 font-heading">
               Palmists, Gemstone Advisors, Past-Life Regressionists, Energy Workers & Other Occult Professionals
             </h4>
-            <p className="text-xs text-zinc-400">
+            <p className="text-xs text-zinc-600">
               If your business relies on occult knowledge and personalized consultations, our growth architecture applies directly to your client journey.
             </p>
           </div>
@@ -197,7 +197,7 @@ export const WhoWeHelpSection: React.FC<WhoWeHelpSectionProps> = ({ onOpenAudit,
               trackEvent('cta_click', { location: 'other_professionals' });
               onOpenAudit();
             }}
-            className="flex-shrink-0 px-5 py-2.5 rounded-xl bg-white/[0.06] hover:bg-[#FF5B00] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+            className="flex-shrink-0 px-6 py-3 rounded-full bg-[#FF5B00] hover:bg-[#E05000] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-md shadow-[#FF5B00]/20"
           >
             Request Custom Audit
           </button>

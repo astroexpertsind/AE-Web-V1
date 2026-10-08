@@ -40,7 +40,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0D11] text-[#EDEDED] flex flex-col selection:bg-[#FF5B00] selection:text-white">
+    <div className="min-h-screen bg-[#FBFBFC] text-[#111827] flex flex-col selection:bg-[#FF5B00] selection:text-white">
       {/* Sticky Navigation Header */}
       <Navbar
         activePage={activePage}
@@ -152,11 +152,11 @@ export function App() {
 
       {/* Dedicated Growth Audit Modal Overlay */}
       {auditModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl max-h-[90vh] bg-[#12151B] border border-white/[0.1] rounded-2xl shadow-2xl overflow-y-auto my-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl max-h-[90vh] bg-white border border-zinc-200 rounded-3xl shadow-2xl overflow-y-auto my-auto">
             <button
               onClick={closeAuditModal}
-              className="absolute top-4 right-4 z-10 p-2 rounded-lg text-zinc-400 hover:text-white bg-white/[0.04] hover:bg-white/[0.1] transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 rounded-xl text-zinc-500 hover:text-zinc-900 bg-zinc-100 hover:bg-zinc-200 transition-colors"
               aria-label="Close Audit Modal"
             >
               <X className="w-5 h-5" />

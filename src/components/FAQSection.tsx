@@ -67,16 +67,16 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenAudit }) => {
   };
 
   return (
-    <section className="py-24 bg-[#0E1116] border-t border-white/[0.04]">
+    <section className="py-24 bg-[#F8F9FA] border-t border-zinc-200/80">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#FF5B00]/25 bg-[#FF5B00]/10 text-xs font-bold uppercase tracking-wider text-[#FF5B00]">
             <span>Frequently Asked Questions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-950 tracking-tight font-heading">
             Clear Answers About Our Agency
           </h2>
-          <p className="text-base text-zinc-400 font-normal">
+          <p className="text-base text-zinc-600 font-normal">
             Everything you need to know about partnering with Astro Experts.
           </p>
         </div>
@@ -88,14 +88,14 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenAudit }) => {
             return (
               <div
                 key={faq.question}
-                className="rounded-xl bg-[#141820] border border-white/[0.06] overflow-hidden transition-colors"
+                className="rounded-2xl bg-white border border-zinc-200/90 overflow-hidden shadow-2xs transition-colors"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full py-4 px-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                  className="w-full py-4.5 px-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer hover:bg-zinc-50/50 transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base font-semibold text-white">
+                  <span className="text-base font-semibold text-zinc-900">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -106,7 +106,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenAudit }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-sm text-zinc-300 leading-relaxed border-t border-white/[0.04]">
+                  <div className="px-6 pb-5 pt-1 text-sm text-zinc-600 leading-relaxed border-t border-zinc-100 bg-zinc-50/40">
                     {faq.answer}
                   </div>
                 )}
@@ -116,7 +116,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onOpenAudit }) => {
         </div>
 
         {/* Bottom prompt */}
-        <div className="mt-12 text-center text-xs text-zinc-400">
+        <div className="mt-12 text-center text-xs text-zinc-500">
           Have a specific question about your practice?{' '}
           <button
             onClick={() => {
